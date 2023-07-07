@@ -16,24 +16,19 @@ print(even_numbers)
 # 2. Print the difference between the largest and smallest value:
 
 # numbers.sort()
-difference = numbers[10] - numbers[0]
+difference = numbers[8] - numbers[0]
 
 print(difference)
 
 # 3. Print True if the list contains a 2 next to a 2 somewhere.
 
 
-
-
 def search_for_twos(list): 
-    initial = numbers[2]
-    for index in numbers[3::]:
-        if initial == index:
-            return(True)
+    for number in numbers:
+            if number == numbers[number+1] and number == 2:
+                return True
 
 print(search_for_twos(numbers))
-            
-    
 
 
 # 4. Print the sum of the numbers, 
