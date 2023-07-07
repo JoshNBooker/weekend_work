@@ -1,6 +1,6 @@
 # For the following list of numbers:
 
-numbers = [1, 6, 2, 2, 7, 3, 7, 6, 13, 99, 7]
+numbers = [1, 6, 99, 2, 2, 1, 3, 7, 6, 13, 7]
 
 # 1. Print out a list of the even integers:
 
@@ -23,10 +23,12 @@ print(difference)
 # 3. Print True if the list contains a 2 next to a 2 somewhere.
 
 
-def search_for_twos(list): 
-    for number in numbers:
-            if number == numbers[number+1] and number == 2:
-                return True
+def search_for_twos(list):
+    length = len(numbers)
+    for box in numbers:
+            if box < length:
+                if box == numbers[box+1] and box == 2:
+                    return True
 
 print(search_for_twos(numbers))
 
@@ -36,6 +38,27 @@ print(search_for_twos(numbers))
 #    
 #    So [11, 6, 4, 99, 7, 11] would have sum of 22
 
+power = True
+total = 0
+
+def weird_sum_tool(list):
+    total = 0
+    power = True
+    for digit in numbers:
+        if digit == 6:
+            power = False
+        elif digit == 7:
+            power = True
+            if power == True:
+                continue
+        elif power == False:
+            continue
+        else:
+            total += digit
+            
+weird_sum_tool(numbers)
+
+print(total)
 
 # 5. HARD! Print the sum of the numbers. 
 #    Except the number 13 is very unlucky, so it does not count.
