@@ -24,10 +24,10 @@ print(difference)
 
 
 def search_for_twos(list):
-    length = len(numbers)
-    for box in numbers:
+    length = len(list)
+    for box in list:
             if box < length:
-                if box == numbers[box+1] and box == 2:
+                if box == list[box+1] and box == 2:
                     return True
 
 print(search_for_twos(numbers))
@@ -66,6 +66,24 @@ print(total)
 #    HINT - You will need to track the index throughout the loop.
 #
 #    So [5, 13, 2] would have sum of 5. 
+
+
+
+def unlucky_number_function(list):
+    total = 0
+    round = 0
+    max_round_number = len(list)
+    while round < max_round_number: # basically saying until you get to the end of list!
+        if list[round] == 13:
+            round += 2
+        else:
+            total += list[round]
+            round += 1 # this is moving the "round" up
+    return total
+
+
+print(unlucky_number_function(numbers))
+
 
 
 
