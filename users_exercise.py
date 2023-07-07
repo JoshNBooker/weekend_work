@@ -77,7 +77,14 @@ print(users["Erik"]["lottery_numbers"][0])
 
 # 6. Return an list of Avril's lottery numbers that are even
 
+def return_evens(list):
+  even_lottery_numbers = []
+  for number in users["Avril"]["lottery_numbers"]:
+      if number % 2 == 0:
+        even_lottery_numbers.append(number)
+  return even_lottery_numbers
 
+print(return_evens(users["Avril"]["lottery_numbers"]))
 
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 # 8. Change Erik's hometown to Edinburgh
