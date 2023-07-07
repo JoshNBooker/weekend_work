@@ -1,6 +1,6 @@
 # For the following list of numbers:
 
-numbers = [1, 6, 2, 2, 7, 1, 6, 13, 99, 7]
+numbers = [1, 6, 2, 2, 7, 3, 7, 6, 13, 99, 7]
 
 # 1. Print out a list of the even integers:
 
@@ -15,12 +15,25 @@ print(even_numbers)
 
 # 2. Print the difference between the largest and smallest value:
 
-numbers.sort()
-difference = numbers[9] - numbers[0]
+# numbers.sort()
+difference = numbers[10] - numbers[0]
 
 print(difference)
 
 # 3. Print True if the list contains a 2 next to a 2 somewhere.
+
+
+
+
+def search_for_twos(list): 
+    initial = numbers[2]
+    for index in numbers[3::]:
+        if initial == index:
+            return(True)
+
+print(search_for_twos(numbers))
+            
+    
 
 
 # 4. Print the sum of the numbers, 
