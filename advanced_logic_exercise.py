@@ -15,6 +15,10 @@ print(even_numbers)
 
 # 2. Print the difference between the largest and smallest value:
 
+numbers.sort()
+difference = numbers[9] - numbers[0]
+
+print(difference)
 
 # 3. Print True if the list contains a 2 next to a 2 somewhere.
 
