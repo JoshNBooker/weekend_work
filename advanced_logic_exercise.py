@@ -1,6 +1,6 @@
 # For the following list of numbers:
 
-numbers = [1, 6, 99, 2, 2, 1, 3, 7, 6, 13, 7]
+numbers = [1, 6, 99, 2, 2, 1, 3, 7, 6, 13, 7, 10, 6, 13, 9]
 
 # 1. Print out a list of the even integers:
 
@@ -69,7 +69,7 @@ print(total)
 
 
 
-def unlucky_number_function(list):
+def unlucky_number_function_1(list):
     total = 0
     round = 0
     max_round_number = len(list)
@@ -81,13 +81,19 @@ def unlucky_number_function(list):
             round += 1 # this is moving the "round" up
     return total
 
+def unlucky_number_function_2(list):
+    total = 0
+    skip = 0
+    for i in list:
+        if skip == 1:
+            skip = 0
+            continue
+        elif i == 13:
+            skip = 1
+            continue
+        else:
+            total += i
+    return total
 
-print(unlucky_number_function(numbers))
-
-
-
-
-
-
-
-
+print(unlucky_number_function_1(numbers))
+print(unlucky_number_function_2(numbers))
